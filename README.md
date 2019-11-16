@@ -30,7 +30,7 @@ Creality Ender-3 with SKR Mini E3 v1.3 and Creality BLTouch 3.1
 
 Please note that ANTCLabs cable colors could be differnet.
 
-### Binary File is in the BIN Folder
+## Binary File is in the BIN Folder
 
 Please make sure to go over the configuration of the system before installing this Firmware.
 
