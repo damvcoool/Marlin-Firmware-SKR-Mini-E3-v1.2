@@ -4,10 +4,6 @@
 
 To build Marlin 2.0 you'll need [PlatformIO](http://docs.platformio.org/en/latest/ide.html#platformio-ide). We've posted detailed instructions on [Building Marlin with PlatformIO for ReArm](http://marlinfw.org/docs/basics/install_rearm.html) (which applies well to other 32-bit boards).
 
-## Hardware Abstraction Layer (HAL)
-
-Marlin 2.0 introduces a layer of abstraction so that all the existing high-level code can be built for 32-bit platforms while still retaining full 8-bit AVR compatibility. Retaining AVR compatibility and a single code-base is important to us, because we want to make sure that features and patches get as much testing and attention as possible, and that all platforms always benefit from the latest improvements.
-
 ## Current Target
 
 Creality Ender-3 with SKR Mini E3 v1.3 and Creality BLTouch 3.1
@@ -25,9 +21,18 @@ Creality Ender-3 with SKR Mini E3 v1.3 and Creality BLTouch 3.1
 - Bed Size is 225x225mm
 - Enable Menu to Level Bed Corners (and Center)
 - Pre-Heat for "Fillament Cold Pull" instead of Pre-heat for ABS
+- Fix for EEPROM saving issue
+- Using SoftwareSerialM instead to be able to use up-to-date TMCStepper library, instead of BTT outdated library.
 
 ## BLTouch Wiring
 
+<img src="https://github.com/damvcoool/Marlin-2.0.x-SKR-Mini-E3-v1.2/blob/master/img/SKR%20Mini%20E3%20v1.2%20-%20Ender%203%20-%20Creality%20BLTouch%203.1%20Wiring.png"/>
+
+Please note that ANTCLabs cable colors could be differnet.
+
+### Binary File is in the BIN Folder
+
+Please make sure to go over the configuration of the system before installing this Firmware.
 
 ## Credits
 
