@@ -28,6 +28,8 @@ Creality Ender-3 with SKR Mini E3 v1.2 and Creality BLTouch 3.1
 
 ## BLTouch Wiring
 
+I will be updating this picture later to be more clear, the BLTouch Probe cables should go in the Dedicated Probe PIN PC14, not on the Z-Endstop as others suggest.
+
 <img src="https://github.com/damvcoool/Marlin-2.0.x-SKR-Mini-E3-v1.2/blob/master/img/SKR%20Mini%20E3%20v1.2%20-%20Ender%203%20-%20Creality%20BLTouch%203.1%20Wiring.png"/>
 
 Please note that ANTCLabs cable colors could be differnet.
