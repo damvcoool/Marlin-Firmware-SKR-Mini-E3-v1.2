@@ -15,16 +15,16 @@ Creality Ender-3 with SKR Mini E3 v1.3 and Creality BLTouch 3.1
 - Disable Boot Screens
 - Disable Info Screen
 - Enabled Slim Menus
-- Disabled Chamber Thermal Protection (I do not use a cage for my Ender-3, it runs free!)
 - Enabled S Curve Acceleration
 - Disable ARC Support (Cura does not have arc support anyway)
-- Enabled Linear Advance 
+- Enabled Linear Advance
+- Enabled Square Wave Stepping
 - Enabled Hybrid Threshold for TMC2209 Stepper Drivers
 - Bed Size is 225x225mm
 - Enable Menu to Level Bed Corners (and Center)
 - Pre-Heat for "Fillament Cold Pull" instead of Pre-heat for ABS
 - Fix for EEPROM saving issue
-- Using SoftwareSerialM instead to be able to use up-to-date TMCStepper library, instead of BTT outdated library.
+- Using SoftwareSerialM instead to be able to use up-to-date TMCStepper library, instead of BTT outdated TMCStepper library.
 
 ## BLTouch Wiring
 
