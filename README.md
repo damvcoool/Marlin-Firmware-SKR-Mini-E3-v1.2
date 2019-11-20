@@ -6,7 +6,7 @@ To build Marlin 2.0 you'll need [PlatformIO](http://docs.platformio.org/en/lates
 
 ## Current Target
 
-Creality Ender-3 with SKR Mini E3 v1.3 and Creality BLTouch 3.1
+Creality Ender-3 with SKR Mini E3 v1.2 and Creality BLTouch 3.1
 
 ## Features Enabled
 
