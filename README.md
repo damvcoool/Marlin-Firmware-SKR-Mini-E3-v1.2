@@ -38,13 +38,13 @@ Please make sure to go over the configuration of the system before installing th
 
 4 Flavors, with self explanatory names, BLTouch use a 5x5 grid to probe, and Manual Bed Leveling uses a 3x3 grid.
 
-SKR_Mini_E3_v1.2_256K_BLTouch_v3.1
-SKR_Mini_E3_v1.2_256K_Manual_Bed_Level
+- SKR_Mini_E3_v1.2_256K_BLTouch_v3.1
+- SKR_Mini_E3_v1.2_256K_Manual_Bed_Level
 
 Also added created the optional 512k variant
 
-SKR_Mini_E3_v1.2_512K_BLTouch_v3.1
-SKR_Mini_E3_v1.2_512K_Manual_Bed_Level
+- SKR_Mini_E3_v1.2_512K_BLTouch_v3.1
+- SKR_Mini_E3_v1.2_512K_Manual_Bed_Level
 
 Note: I use SKR_Mini_E3_v1.2_256K_BLTouch_v3.1 on my machine and it's the only firmware I have tested myself.
 
