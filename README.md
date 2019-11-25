@@ -1,5 +1,8 @@
 ﻿﻿# Marlin 3D Printer Firmware
 
+### BigTreeTech Updated their Firmware, get it here:
+https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3
+
 ## Building Marlin 2.0
 
 To build Marlin 2.0 you'll need [PlatformIO](http://docs.platformio.org/en/latest/ide.html#platformio-ide). We've posted detailed instructions on [Building Marlin with PlatformIO for ReArm](http://marlinfw.org/docs/basics/install_rearm.html) (which applies well to other 32-bit boards).
