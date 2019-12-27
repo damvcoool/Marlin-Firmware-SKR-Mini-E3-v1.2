@@ -28,7 +28,7 @@
 /**
  * Marlin release version identifier
  */
-#define SHORT_BUILD_VERSION "2.0.0"
+//#define SHORT_BUILD_VERSION "2.0.x"
 
 /**
  * Verbose version identifier which should contain a reference to the location
@@ -41,12 +41,12 @@
  * here we define this default string as the date where the latest release
  * version was tagged.
  */
-#define STRING_DISTRIBUTION_DATE "2019-12-07"
+//#define STRING_DISTRIBUTION_DATE "2019-07-10"
 
 /**
  * Defines a generic printer name to be output to the LCD after booting Marlin.
  */
-#define MACHINE_NAME "SKR Mini E3"
+//#define MACHINE_NAME "3D Printer"
 
 /**
  * The SOURCE_CODE_URL is the location where users will find the Marlin Source

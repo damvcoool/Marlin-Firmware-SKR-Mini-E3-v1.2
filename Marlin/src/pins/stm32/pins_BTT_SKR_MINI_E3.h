@@ -33,7 +33,7 @@
 
 #define FLASH_EEPROM_EMULATION
 #define EEPROM_PAGE_SIZE     uint16(0x800) // 2KB
-#define EEPROM_START_ADDRESS uint32(0x8000000 + (STM32_FLASH_SIZE) * 2048 - 2 * EEPROM_PAGE_SIZE)
+#define EEPROM_START_ADDRESS uint32(0x8000000 + (STM32_FLASH_SIZE) * 1024 - 2 * EEPROM_PAGE_SIZE)
 #undef E2END
 #define E2END                (EEPROM_PAGE_SIZE - 1) // 2KB
 
@@ -127,6 +127,8 @@
     #define LCD_PINS_D4    PB9
 
   #elif ENABLED(ZONESTAR_LCD)     // ANET A8 LCD Controller - Must convert to 3.3V - CONNECTING TO 5V WILL DAMAGE THE BOARD!
+
+    #error "CAUTION! ZONESTAR_LCD requires wiring modifications. See 'pins_BTT_SKR_MINI_E3.h' for details. Comment out this line to continue."
 
     #define LCD_PINS_RS    PB9
     #define LCD_PINS_ENABLE PB6
