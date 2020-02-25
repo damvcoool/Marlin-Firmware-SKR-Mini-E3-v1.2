@@ -1,6 +1,6 @@
 /**
  * Marlin 3D Printer Firmware
- * Copyright (c) 2019 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
+ * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
  *
  * Based on Sprinter and grbl.
  * Copyright (c) 2011 Camiel Gubbels / Erik van der Zalm
@@ -74,9 +74,9 @@
 #if Z_STALL_SENSITIVITY
   #define Z_STOP_PIN       Z_DIAG_PIN
   #if Z_HOME_DIR < 0
-    #define Z_MAX_PIN      P1_24   // PWRDET
+    #define Z_MAX_PIN      P1_00   // PWRDET
   #else
-    #define Z_MIN_PIN      P1_24   // PWRDET
+    #define Z_MIN_PIN      P1_00   // PWRDET
   #endif
 #else
   #define Z_STOP_PIN       P1_27   // Z-STOP
@@ -153,7 +153,7 @@
 //
 // Include common SKR pins
 //
-#include "pins_BTT_SKR.h"
+#include "pins_BTT_SKR_common.h"
 
 //
 // Software SPI pins for TMC2130 stepper drivers
@@ -232,9 +232,19 @@
  *              EXP2                                              EXP1
  */
 #if HAS_SPI_LCD
-  #define BTN_ENC          P0_28   // (58) open-drain
+  #if ENABLED(ANET_FULL_GRAPHICS_LCD)
 
-  #if ENABLED(CR10_STOCKDISPLAY)
+    #define LCD_PINS_RS    P1_23
+
+    #define BTN_EN1        P1_20
+    #define BTN_EN2        P1_22
+    #define BTN_ENC        P1_18
+
+    #define LCD_PINS_ENABLE P1_21
+    #define LCD_PINS_D4    P1_19
+
+  #elif ENABLED(CR10_STOCKDISPLAY)
+    #define BTN_ENC        P0_28   // (58) open-drain
     #define LCD_PINS_RS    P1_22
 
     #define BTN_EN1        P1_18
@@ -244,6 +254,7 @@
     #define LCD_PINS_D4    P1_21
 
   #else
+    #define BTN_ENC        P0_28   // (58) open-drain
     #define LCD_PINS_RS    P1_19
 
     #define BTN_EN1        P3_26   // (31) J3-2 & AUX-4

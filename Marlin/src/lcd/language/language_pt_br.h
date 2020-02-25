@@ -1,6 +1,6 @@
 /**
  * Marlin 3D Printer Firmware
- * Copyright (c) 2019 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
+ * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
  *
  * Based on Sprinter and grbl.
  * Copyright (c) 2011 Camiel Gubbels / Erik van der Zalm
@@ -293,7 +293,7 @@ namespace Language_pt_br {
   PROGMEM Language_Str MSG_FILAMENTLOAD_E                  = _UxGT("Carregar Filamento *");
   PROGMEM Language_Str MSG_FILAMENTUNLOAD_E                = _UxGT("Descarreg. Filamento *");
   PROGMEM Language_Str MSG_FILAMENTUNLOAD_ALL              = _UxGT("Descarregar Todos");
-  PROGMEM Language_Str MSG_INIT_MEDIA                      = _UxGT("Iniciar SD");
+  PROGMEM Language_Str MSG_ATTACH_MEDIA                    = _UxGT("Iniciar SD");
   PROGMEM Language_Str MSG_CHANGE_MEDIA                    = _UxGT("Trocar SD");
   PROGMEM Language_Str MSG_ZPROBE_OUT                      = _UxGT("Sonda fora da mesa");
   PROGMEM Language_Str MSG_SKEW_FACTOR                     = _UxGT("Fator de Cisalho");
