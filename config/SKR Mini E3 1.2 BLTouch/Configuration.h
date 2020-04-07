@@ -723,7 +723,11 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }
+
+/**
+Adjusted for Dual Gear Extruder
+**/
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 139.6 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -949,7 +953,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { -46.5, 7, -2 }
+#define NOZZLE_TO_PROBE_OFFSET { -46.5, 7, -3 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
