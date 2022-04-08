@@ -1,4 +1,4 @@
-﻿<img align="right" width=175 src="buildroot/share/pixmaps/logo/marlin-250.png" />
+<img align="right" width=175 src="buildroot/share/pixmaps/logo/marlin-250.png" />
 
 # Marlin 3D Printer Firmware
 
@@ -24,24 +24,25 @@ To build Marlin you'll need [Arduino IDE 1.8.8 or newer](https://www.arduino.cc/
 
 ## Current Target
 
-Creality Ender-3 with SKR Mini E3 v1.2 and Creality BLTouch 3.1
+Creality Ender-3 with SKR Mini E3 v1.2, Creality BLTouch 3.1 and Dualgear Extruder.
 
 ## Features Enabled
 
 - BLTouch (Bi-Linear Bed Leveling)
+- Assisted Bed Tramming (Using BLTouch)
 - Custom Status Screen (Ender-3 Default)
 - Disable Boot Screens
 - Disable Info Screen
-- Enabled Slim Menus
 - Enabled S Curve Acceleration
 - Disable ARC Support (Cura does not have arc support anyway)
 - Enabled Linear Advance
 - Enabled Square Wave Stepping
 - Enabled Hybrid Threshold for TMC2209 Stepper Drivers
-- Bed Size is 230x230mm
+- Bed Size is 228x228mm
 - Enable Menu to Level Bed Corners (and Center)
+- Enable Probe Offset Wizard
 - Pre-Heat for "PLA" and "PETG"
-- Fix for EEPROM saving issue
+- ~~Fix for EEPROM saving issue~~ no longer needed
 
 ## BLTouch Wiring
 
