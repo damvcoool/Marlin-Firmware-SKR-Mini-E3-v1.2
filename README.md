@@ -53,7 +53,7 @@ Please note that ANTCLabs cable colors could be differnet.
 
 Please make sure to go over the configuration of the system before installing this Firmware.
 
-- [SKR_Mini_E3_v1.2_256K_BLTouch_v3.1](bin/SKR_Mini_E3_v1.2_BLTouch_v3.1.bin?raw=true)
+- [SKR_Mini_E3_v1.2_256K_BLTouch_v3.1](https://github.com/damvcoool/Marlin-Firmware-SKR-Mini-E3-v1.2/raw/Main/bin/SKR_Mini_E3_v1.2_BLTouch_v3.1.bin)
 
 ## License
 
