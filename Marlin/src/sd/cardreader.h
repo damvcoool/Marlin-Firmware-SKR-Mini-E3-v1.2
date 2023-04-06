@@ -80,11 +80,16 @@ typedef struct {
        filenameIsDir:1,
        workDirIsRoot:1,
        abort_sd_printing:1
+       #if DO_LIST_BIN_FILES
+         , filenameIsBin:1
+       #endif
        #if ENABLED(BINARY_FILE_TRANSFER)
          , binary_mode:1
        #endif
     ;
 } card_flags_t;
+
+enum ListingFlags : uint8_t { LS_LONG_FILENAME, LS_ONLY_BIN, LS_TIMESTAMP };
 
 #if ENABLED(AUTO_REPORT_SD_STATUS)
   #include "../libs/autoreport.h"
@@ -204,13 +209,17 @@ public:
     FORCE_INLINE static void getfilename_sorted(const uint16_t nr) { selectFileByIndex(nr); }
   #endif
 
-  static void ls(TERN_(LONG_FILENAME_HOST_SUPPORT, bool includeLongNames=false));
+  static void ls(const uint8_t lsflags);
 
   #if ENABLED(POWER_LOSS_RECOVERY)
     static bool jobRecoverFileExists();
     static void openJobRecoveryFile(const bool read);
     static void removeJobRecoveryFile();
   #endif
+
+  // Binary flag for the current file
+  static bool fileIsBinary() { return TERN0(DO_LIST_BIN_FILES, flag.filenameIsBin); }
+  static void setBinFlag(const bool bin) { TERN(DO_LIST_BIN_FILES, flag.filenameIsBin = bin, UNUSED(bin)); }
 
   // Current Working Dir - Set by cd, cdup, cdroot, and diveToFile(true, ...)
   static char* getWorkDirName()  { workDir.getDosName(filename); return filename; }
@@ -331,14 +340,11 @@ private:
   //
   // Directory items
   //
-  static bool is_dir_or_gcode(const dir_t &p);
+  static bool is_visible_entity(const dir_t &p OPTARG(CUSTOM_FIRMWARE_UPLOAD, const bool onlyBin=false));
   static int countItems(SdFile dir);
   static void selectByIndex(SdFile dir, const uint8_t index);
   static void selectByName(SdFile dir, const char * const match);
-  static void printListing(
-    SdFile parent
-    OPTARG(LONG_FILENAME_HOST_SUPPORT, const bool includeLongNames=false)
-    , const char * const prepend=nullptr
+  static void printListing(SdFile parent, const char * const prepend, const uint8_t lsflags
     OPTARG(LONG_FILENAME_HOST_SUPPORT, const char * const prependLong=nullptr)
   );
 
@@ -349,7 +355,7 @@ private:
 
 #if ENABLED(USB_FLASH_DRIVE_SUPPORT)
   #define IS_SD_INSERTED() DiskIODriver_USBFlash::isInserted()
-#elif PIN_EXISTS(SD_DETECT)
+#elif HAS_SD_DETECT
   #define IS_SD_INSERTED() (READ(SD_DETECT_PIN) == SD_DETECT_STATE)
 #else
   // No card detect line? Assume the card is inserted.

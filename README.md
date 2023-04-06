@@ -34,15 +34,14 @@ Creality Ender-3 with SKR Mini E3 v1.2, Creality BLTouch 3.1 and Dualgear Extrud
 - Disable Boot Screens
 - Disable Info Screen
 - Enabled S Curve Acceleration
-- Disable ARC Support (Cura does not have arc support anyway)
+- ARC Support (Install Cura plugin ArcWelder to use it.)
 - Enabled Linear Advance
 - Enabled Square Wave Stepping
-- Enabled Hybrid Threshold for TMC2209 Stepper Drivers
 - Bed Size is 228x228mm
 - Enable Menu to Level Bed Corners (and Center)
 - Enable Probe Offset Wizard
-- Pre-Heat for "PLA" and "PETG"
-- ~~Fix for EEPROM saving issue~~ no longer needed
+- Assisted Probe to Nozzle Z-Offset
+- Pre-Heat for "PLA" and "PETG" and "HOT-PLUG"
 
 ## BLTouch Wiring
 
@@ -56,23 +55,7 @@ Please note that ANTCLabs cable colors could be differnet.
 
 Please make sure to go over the configuration of the system before installing this Firmware.
 
-4 Flavors, with self explanatory names, BLTouch use a 5x5 grid to probe, and Manual Bed Leveling uses a 3x3 grid.
-
 - [SKR_Mini_E3_v1.2_256K_BLTouch_v3.1](https://raw.githubusercontent.com/damvcoool/Marlin-2.0.x-SKR-Mini-E3-v1.2/master/bin/SKR_Mini_E3_v1.2_256K_BLTouch_v3.1.bin)
-- [SKR_Mini_E3_v1.2_256K_Manual_Bed_Level](https://raw.githubusercontent.com/damvcoool/Marlin-2.0.x-SKR-Mini-E3-v1.2/master/bin/SKR_Mini_E3_v1.2_256K_Manual_Bed_Level.bin)
-
-I am no longer providing 512k variant.
-
-## Credits
-
-The current Marlin dev team consists of:
-
-- Scott Lahteine [[@thinkyhead](https://github.com/thinkyhead)] - USA &nbsp; [Donate](http://www.thinkyhead.com/donate-to-marlin) / Flattr: [![Flattr Scott](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=thinkyhead&url=https://github.com/MarlinFirmware/Marlin&title=Marlin&language=&tags=github&category=software)
-- Roxanne Neufeld [[@Roxy-3D](https://github.com/Roxy-3D)] - USA
-- Chris Pepper [[@p3p](https://github.com/p3p)] - UK
-- Bob Kuhn [[@Bob-the-Kuhn](https://github.com/Bob-the-Kuhn)] - USA
-- João Brazio [[@jbrazio](https://github.com/jbrazio)] - Portugal
-- Erik van der Zalm [[@ErikZalm](https://github.com/ErikZalm)] - Netherlands &nbsp; [![Flattr Erik](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=ErikZalm&url=https://github.com/MarlinFirmware/Marlin&title=Marlin&language=&tags=github&category=software)
 
 ## License
 

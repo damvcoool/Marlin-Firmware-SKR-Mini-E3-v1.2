@@ -25,8 +25,6 @@
  * NeoPixel support
  */
 
-#define MAX_NEOPIXELS 127
-
 #ifndef _NEOPIXEL_INCLUDE_
   #error "Always include 'leds.h' and not 'neopixel.h' directly."
 #endif
@@ -68,7 +66,7 @@
 // Types
 // ------------------------
 
-typedef IF<(MAX_NEOPIXELS > 127), int16_t, int8_t>::type pixel_index_t;
+typedef IF<(TERN0(NEOPIXEL_LED, NEOPIXEL_PIXELS > 127)), int16_t, int8_t>::type pixel_index_t;
 
 // ------------------------
 // Classes
@@ -90,7 +88,8 @@ public:
   static void set_color(const uint32_t c);
 
   #ifdef NEOPIXEL_BKGD_INDEX_FIRST
-    static void set_background_color(uint8_t r, uint8_t g, uint8_t b, uint8_t w);
+    static void set_background_color(const uint8_t r, const uint8_t g, const uint8_t b, const uint8_t w);
+    static void set_background_color(const uint8_t (&rgbw)[4]) { set_background_color(rgbw[0], rgbw[1], rgbw[2], rgbw[3]); }
     static void reset_background_color();
   #endif
 
@@ -131,6 +130,13 @@ public:
 
   // Accessors
   static uint16_t pixels() { return adaneo1.numPixels() * TERN1(NEOPIXEL2_INSERIES, 2); }
+
+  static uint32_t pixel_color(const uint16_t n) {
+    #if ENABLED(NEOPIXEL2_INSERIES)
+      if (n >= NEOPIXEL_PIXELS) return adaneo2.getPixelColor(n - (NEOPIXEL_PIXELS));
+    #endif
+    return adaneo1.getPixelColor(n);
+  }
 
   static uint8_t brightness() { return adaneo1.getBrightness(); }
 
@@ -175,6 +181,7 @@ extern Marlin_NeoPixel neo;
 
     // Accessors
     static uint16_t pixels() { return adaneo.numPixels();}
+    static uint32_t pixel_color(const uint16_t n) { return adaneo.getPixelColor(n); }
     static uint8_t brightness() { return adaneo.getBrightness(); }
     static uint32_t Color(uint8_t r, uint8_t g, uint8_t b OPTARG(HAS_WHITE_LED2, uint8_t w)) {
       return adaneo.Color(r, g, b OPTARG(HAS_WHITE_LED2, w));
