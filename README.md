@@ -45,7 +45,7 @@ Creality Ender-3 with SKR Mini E3 v1.2, Creality BLTouch 3.1 and Dualgear Extrud
 
 I will be updating this picture later to be more clear, the BLTouch Probe cables should go in the Dedicated Probe PIN PC14, not on the Z-Endstop as others suggest.
 
-<img src="https://github.com/damvcoool/Marlin-Firmware-SKR-Mini-E3-v1.2/blob/Main/img/SKR%20Mini%20E3%20v1.2%20-%20Ender%203%20-%20Creality%20BLTouch%203.1%20Wiring.png?raw=true"/>
+<img src="img/SKR%20Mini%20E3%20v1.2%20-%20Ender%203%20-%20Creality%20BLTouch%203.1%20Wiring.png?raw=true"/>
 
 Please note that ANTCLabs cable colors could be differnet.
 
@@ -53,7 +53,7 @@ Please note that ANTCLabs cable colors could be differnet.
 
 Please make sure to go over the configuration of the system before installing this Firmware.
 
-- [SKR_Mini_E3_v1.2_256K_BLTouch_v3.1](https://raw.githubusercontent.com/damvcoool/Marlin-2.0.x-SKR-Mini-E3-v1.2/master/bin/SKR_Mini_E3_v1.2_256K_BLTouch_v3.1.bin)
+- [SKR_Mini_E3_v1.2_256K_BLTouch_v3.1](bin/SKR_Mini_E3_v1.2_BLTouch_v3.1.bin)
 
 ## License
 
