@@ -1694,7 +1694,7 @@
 
 // @section geometry
 
-// The size of the printable area
+// The size of the printable area Bed Size
 #define X_BED_SIZE 228
 #define Y_BED_SIZE 228
 
