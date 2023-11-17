@@ -29,8 +29,10 @@ Creality Ender-3 with SKR Mini E3 v1.2, Creality BLTouch 3.1 and Dualgear Extrud
 - BLTouch (Bi-Linear Bed Leveling)
 - Assisted Bed Tramming (Using BLTouch)
 - Custom Status Screen (Ender-3 Default)
-- Disable Boot Screens
-- Disable Info Screen
+- enable Pause Nozzel
+- enable babytepping
+- enable Boot Screens
+- enable Info Screen
 - Enabled S Curve Acceleration
 - ARC Support (Install Cura plugin ArcWelder to use it.)
 - Enabled Linear Advance
